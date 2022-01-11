@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 laba</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+    
+</head>
+<body>
+    <form name="test" action="" method="post">
+
+        <center>
+        <label for="sotrid"> Введите номер сотрудника: </label>
+        <input type="text" placeholder="Номер сотрудника" name="name" id="sotrid"title="Введите номер сотрудника"/> <br>
+    
+        <input type="button"   onclick="isNumeric()" class="but" value="Подтвердить номер" /> <br /><br />
+        
+    
+        <label for="sotrname"> Введите имя сотрудника: </label>
+        <input type="text" onmouseover="ChangeOver(this)" onmouseout="ChangeOut(this)" placeholder="Имя сотрудника" name = "sotrname" id="sotrname" title="Введите имя сотрудника"/> <br>
+    
+        <input type="button" class="but" onclick="sendMsg()" value="Подтвердить имя"/> <br /><br />
+    
+        <a href="pp.html">Создать нового сотрудника</a> <br /><br />
+    
+        <input type="button" class="but" onclick="dis('myTable')"  value=" Показать всех сотрудников "/> <br /><br />
+    
+        
+    
+
+    </div>
+    <table style="display:none;" id="myTable" border="1"
+        <caption>Данные сотрудников</caption>
+        <tr>
+            <th>Выберите</th>
+            <th>Номер сотрудника</th>
+            <th>Имя сотрудника</th>
+            <th>Должнотсь сотрудника</th>
+            <th>Дата принятия на работу</th>
+            <th>Департамент</th>
+            <th>"Удалить"</th>
+        </tr>
+        <tr><td><input type="checkbox"/></td><td>0</td><td>Дмитрий</td><td>Программист </td><td>10.11.2021</td><td>ПГУТИ</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>1</td><td>Антон</td><td>Стажер </td><td>07.10.1980</td><td>Россвязь</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>2</td><td>Иван</td><td>Препод</td><td>20.02.2012</td><td>Россвязь</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>3</td><td>Сергей</td><td>разработчик</td><td>06.06.2011</td><td>Россвязь</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>4</td><td>Мария</td><td>разработчик</td><td>11.07.2017</td><td>Минцифра</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>5</td><td>Эльмар</td><td>уборщик</td><td>20.03.2018</td><td>Минцифра</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>6</td><td>Анастасия</td><td>Водитель</td><td>21.10.2002</td><td>ПГУТИ</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>7</td><td>Дарья</td><td>Водитель</td><td>08.04.2020</td><td>ПГУТИ</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>8</td><td>Юлия</td><td>грузчик</td><td>10.10.2020</td><td>СамГУПС</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>9</td><td>Артём</td><td>грузчик</td><td>01.10.2014</td><td>СамГУПС</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+        </table>
+
+
+        
+            <script>
+               myTable.addEventListener('click', function(evt){
+        if (confirm("Вы хотите удалить поле?"))
+         {
+        alert("Удаляю");
+
+        if(evt.target.closest('.deleteRow')) {
+          evt.target.closest('tr').remove()
+            }
+         }
+         else
+          {
+         alert("Ничего не произошло");
+
+            }
+
+          })
+            </script>
+
+        <script>
+            function sendMsg(){
+                window.open('ppp.html?&' + document.getElementById("sotrname").value);
+
+            }
+        </script>
+        
+        <script >
+        
+            function dis(id){
+                if(document.getElementById(id).style.display=="block"){
+                    document.getElementById(id).style.display="none";
+                }
+                else{
+                     document.getElementById(id).style.display="block";
+                }
+            }
+         
+            </script>
+            <script>
+                function isNumeric(){
+                var input = (document.getElementById("sotrid").value);
+                input=isNaN(input);
+                    if(input==true ){
+                    alert("Не число! Введите число!");
+                }
+                else(alert("Это число"));
+            }
+        
+            </script>
+
+
+
+
+            <script>
+                function ChangeOver(x) {
+                x.placeholder= "";
+                };
+                
+                function ChangeOut(x) {   
+                x.placeholder= "Имя сотрудника";
+                }
+                </script>
+            
+        </center>
+
+    </form>
+</div>
+</body>
+</html>

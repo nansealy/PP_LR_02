@@ -1,0 +1,283 @@
+
+body{
+  background: rgb(211, 208, 208);
+  color: rgb(20, 20, 12);
+  font-size: xx-large;
+}
+.but{
+  width:75%;
+  max-width:600px;
+  min-width:300px;
+  padding: 15px 15px 19px 15px;
+  margin: 20px auto 50px auto;
+  }
+
+
+/* 
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  font-size: 15px;
+  line-height: 1.6;
+  color: 111;
+ 
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+.container {
+  width: 100%;
+  max-width: 120px;
+  margin: 0 auto; 
+}
+.intro {
+  width: 100%;
+  height: 100vh;
+} */
+/*
+@font-face {
+    font-weight: 400000;
+    font-family: "Montserrat";
+    font-style: normal;
+    src: url("fonts/Montserrat-Regular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-weight: 700;
+    font-family: "Montserrat";
+    font-style: normal;
+    src: url("fonts/Montserrat-Bold.woff") format("woff");
+  }
+  
+  html,
+  body {
+    margin: 0;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  body {
+    min-width: 430px;
+    border: 2px dashed #ff0000;
+  }
+  
+  html::before,
+  body::before,
+  header::before,
+  footer::before,
+  main::before {
+    color: #7fc1ff;
+  }
+  
+  main,
+  header,
+  footer {
+    background-color: #f3faff;
+    border: 2px solid #7fc1ff;
+  }
+  
+  nav,
+  section,
+  article,
+  aside {
+    background-color: #f9f7ff;
+    border: 2px solid #9779ec;
+  }
+  
+  nav::before,
+  section::before,
+  article::before,
+  aside::before {
+    color: #9779ec;
+  }
+  
+  h1 {
+    font-size: 18px;
+    background-color: #dd3939;
+    border: 2px solid #ff994f;
+  }
+  
+  h1::before {
+    content: "h1";
+    color: #ff994f;
+  }
+  
+  p {
+    background-color: #ffffff;
+    border: 2px solid #f36dff;
+  }
+  
+  p::before {
+    color: #f36dff;
+    content: "p";
+  }
+  
+  * {
+    position: relative;
+    padding: 25px 25px 20px;
+    margin: 0;
+    border-radius: 4px;
+  }
+  
+  *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  *::before {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 10px;
+    letter-spacing: 0.04em;
+  }
+  
+  html::before {
+    content: "html";
+  }
+  
+  body::before {
+    content: "body";
+  }
+  
+  main::before {
+    content: "main";
+  }
+  
+  header::before {
+    content: "header";
+  }
+  
+  footer::before {
+    content: "footer";
+  }
+  
+  section::before {
+    content: "section";
+  }
+  
+  article::before {
+    content: "article";
+  }
+  
+  aside::before {
+    content: "aside";
+  }
+  
+  nav::before {
+    content: "nav";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 laba</title>
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <form>
+    <div class="intro">
+        
+    <div class= "container">
+        <h1>Номер</h1>
+       
+        <input name="surname" value="" size="20" maxlength="20"> 
+        <input type="button" value="Подтвердить" onclick="alert('Вы нажали кнопку!')" name="btn">
+
+    </div>
+   
+    <div class= "container"> 
+        <h1>Имя</h1>
+    
+    <input name="surname" value="" size="20" maxlength="20">
+    <input type="button" value="ОК" onClick="dataField(this.form)">
+
+    <input type="button" value="Подтвердить" onclick="alert('Вы нажали кнопку!')" name="btn">
+    <a href="pp.html">Создать нового сотрудника</a> <br /><br />
+    
+
+    </div>
+    <table class= "container" border="1">
+        <caption>Данные сотрудников</caption>
+        <tr>
+            <th>Выберите</th>
+            <th>Номер сотрудника</th>
+            <th>Имя сотрудника</th>
+            <th>Должнотсь сотрудника</th>
+            <th>Дата принятия на работу</th>
+            <th>Департамент</th>
+            <th>"Удалить"</th>
+        </tr>
+        <tr><td><input type="checkbox"/></td><td>0</td><td>Дмитрий</td><td>Программист 1С</td><td>10.11.2021</td><td>Самара-ВАГ</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>1</td><td>Антон</td><td>Стажер 1С</td><td>07.10.1980</td><td>Пгу-ГДИ</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>2</td><td>Крис</td><td>Препод</td><td>20.02.2012</td><td>ТЛТ-джа</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>3</td><td>Алина</td><td>C# 1С</td><td>06.06.2011</td><td>Аль-Джазира</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>4</td><td>Галя</td><td>JDK</td><td>11.07.2017</td><td>Adidos</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>5</td><td>Эльмар</td><td>Space</td><td>30.03.2018</td><td>Пума</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>6</td><td>Карен</td><td>GameDevC#PlusPlus</td><td>31.10.2002</td><td>Кинопоиск</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>7</td><td>Эльза</td><td>Paint designer</td><td>08.06.2021</td><td>ПГУТИ</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>8</td><td>Джуди</td><td>Водитель</td><td>10.10.2020</td><td>ПАУПАУ отдел</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+            <tr><td><input type="checkbox"/></td><td>9</td><td>Пол</td><td>Водитель</td><td>01.09.2015</td><td>Форсаж-девелопмент</td><td><a  name="tips"class="deleteRow">Удалить</td></tr>
+        </table>
+
+
+    
+        <script>
+
+            var b = document.getElementById("sotrdel");
+            b.onclick = function() {
+                alert("Спасибо, что щелкнули на мне!"); 
+            };
+            
+            b.addEventListener("click", function() {alert('Еще раз спасибо!')}, false); 
+            </script>
+        
+        
+            <script>
+            myTable.addEventListener('click', function(evt){
+                if(evt.target.closest('.deleteRow')) {
+                  evt.target.closest('tr').remove()
+              }
+            })
+            </script>
+        
+        <p></p>
+        <input type="button" value="Все сотрудики" onclick="alert('Вы нажали кнопку!')" name="btn">
+    
+
+
+        <label>
+            Введите дату:
+            <input type="date" name="my-date" min="2021-10-05">
+        </label>
+    
+    
+        <input type="password"  name="password" size=20>
+    </form>
+</div>
+</body>
+</html>

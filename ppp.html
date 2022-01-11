@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Переход</title>
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="scoreGame();">     
+    <div id="textContentEnd" ><p><span id="result"></span></p></div>     
+    <form name="test" action="" method="post">
+
+        <center>
+            <label> Ваши пересланные данные </label> <br/><br />
+        
+
+        <label for="sotrname">Имя сотрудника: </label>
+        <input type="text" name = "sotrname" id="sotrname" title="Произошла магия"/> <br /><br />
+
+        
+    
+        <input type="button" class="but" value="Сохранить"/> <br /><br />
+        <a href="p.html">Венуться в начало</a> <br /><br />
+
+        <script>
+            function scoreGame() {
+                var score = decodeURIComponent(location.search.substr(1)).split('&');
+                score.splice(0, 1);
+                var result = score[0];
+                console.log(result);
+                
+                document.getElementById("sotrname").value=result;
+            }
+            </script>
+</body>
+</html>
